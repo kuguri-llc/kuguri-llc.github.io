@@ -10,8 +10,9 @@
   --line: #d9e2dc;
   --bg: #fbfcfb;
   --white: #ffffff;
-  --serif: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --heading: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
   --sans: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  --en: "Montserrat", sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -64,9 +65,9 @@ a:hover { opacity: 0.75; }
 .brand img { height: 44px; width: auto; mix-blend-mode: multiply; }
 
 .brand-name {
-  font-family: var(--serif);
-  font-size: 20px;
-  letter-spacing: 0.22em;
+  font-family: var(--en);
+  font-size: 19px;
+  letter-spacing: 0.24em;
   color: var(--green-dark);
   font-weight: 600;
 }
@@ -107,11 +108,11 @@ a:hover { opacity: 0.75; }
 }
 
 .hero h1 {
-  font-family: var(--serif);
+  font-family: var(--heading);
   font-size: clamp(26px, 4.5vw, 40px);
   color: var(--green-dark);
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   line-height: 1.7;
 }
 
@@ -129,18 +130,20 @@ a:hover { opacity: 0.75; }
 .section.alt { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
 .section-title {
-  font-family: var(--serif);
-  font-size: 26px;
+  font-family: var(--heading);
+  font-size: 25px;
   color: var(--green-dark);
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .section-title-en {
   display: block;
   text-align: center;
-  font-size: 12px;
+  font-family: var(--en);
+  font-size: 11px;
+  font-weight: 600;
   letter-spacing: 0.3em;
   color: var(--green-soft);
   margin-top: 8px;
@@ -177,12 +180,12 @@ a:hover { opacity: 0.75; }
 }
 
 .service-card h3 {
-  font-family: var(--serif);
-  font-size: 19px;
+  font-family: var(--heading);
+  font-size: 18px;
   color: var(--green-dark);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   margin-bottom: 16px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .service-card p {
@@ -260,7 +263,7 @@ a:hover { opacity: 0.75; }
 .message-sign {
   text-align: right;
   margin-top: 32px;
-  font-family: var(--serif);
+  font-family: var(--heading);
 }
 
 .message-sign .title { font-size: 13px; color: var(--ink-soft); }
@@ -353,17 +356,19 @@ a:hover { opacity: 0.75; }
 }
 
 .page-header h1 {
-  font-family: var(--serif);
+  font-family: var(--heading);
   color: var(--white);
-  font-size: 26px;
-  letter-spacing: 0.2em;
-  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
 }
 
 .page-header .en {
   display: block;
   color: rgba(255, 255, 255, 0.65);
-  font-size: 12px;
+  font-family: var(--en);
+  font-size: 11px;
+  font-weight: 600;
   letter-spacing: 0.3em;
   margin-top: 8px;
   text-transform: uppercase;
@@ -399,10 +404,11 @@ a:hover { opacity: 0.75; }
 
 .copyright {
   text-align: center;
-  font-size: 12px;
+  font-family: var(--en);
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.5);
   margin-top: 48px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 }
 
 /* ===== レスポンシブ ===== */
