@@ -61,7 +61,7 @@ a:hover { opacity: 0.75; }
   gap: 12px;
 }
 
-.brand img { height: 44px; width: auto; }
+.brand img { height: 44px; width: auto; mix-blend-mode: multiply; }
 
 .brand-name {
   font-family: var(--serif);
@@ -103,6 +103,7 @@ a:hover { opacity: 0.75; }
   height: 180px;
   width: auto;
   margin-bottom: 32px;
+  mix-blend-mode: multiply;
 }
 
 .hero h1 {
