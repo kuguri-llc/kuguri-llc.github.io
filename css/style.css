@@ -1,0 +1,428 @@
+/* ===== 合同会社Kuguri コーポレートサイト ===== */
+
+:root {
+  --green-dark: #123c28;
+  --green: #1b5c3d;
+  --green-soft: #2e7a54;
+  --green-pale: #eef4f0;
+  --ink: #21302a;
+  --ink-soft: #5c6b63;
+  --line: #d9e2dc;
+  --bg: #fbfcfb;
+  --white: #ffffff;
+  --serif: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --sans: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  font-size: 16px;
+}
+
+img { max-width: 100%; height: auto; }
+
+a { color: var(--green); text-decoration: none; }
+a:hover { opacity: 0.75; }
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== ヘッダー ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img { height: 44px; width: auto; }
+
+.brand-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  letter-spacing: 0.22em;
+  color: var(--green-dark);
+  font-weight: 600;
+}
+
+.global-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.global-nav a {
+  font-size: 14px;
+  color: var(--ink);
+  letter-spacing: 0.1em;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.global-nav a:hover,
+.global-nav a.current {
+  color: var(--green);
+  border-bottom-color: var(--green);
+  opacity: 1;
+}
+
+/* ===== ヒーロー ===== */
+.hero {
+  background: linear-gradient(160deg, var(--green-pale) 0%, #ffffff 60%);
+  padding: 96px 0 88px;
+  text-align: center;
+}
+
+.hero-logo img {
+  height: 180px;
+  width: auto;
+  margin-bottom: 32px;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 4.5vw, 40px);
+  color: var(--green-dark);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+}
+
+.hero p {
+  margin-top: 24px;
+  color: var(--ink-soft);
+  font-size: 15px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== セクション共通 ===== */
+.section { padding: 80px 0; }
+.section.alt { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.section-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--green-dark);
+  letter-spacing: 0.16em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.section-title-en {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--green-soft);
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.section-lead {
+  text-align: center;
+  margin: 24px auto 0;
+  max-width: 680px;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+/* ===== 事業カード ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--green);
+  padding: 36px 28px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.service-card:hover {
+  box-shadow: 0 10px 28px rgba(18, 60, 40, 0.1);
+  transform: translateY(-3px);
+}
+
+.service-card h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  color: var(--green-dark);
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.service-card ul {
+  margin-top: 14px;
+  padding-left: 1.2em;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* ===== ボタン ===== */
+.btn {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  padding: 14px 48px;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  border: 1px solid var(--green);
+  transition: background 0.25s, color 0.25s;
+  cursor: pointer;
+  font-family: var(--sans);
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--green);
+  opacity: 1;
+}
+
+.center { text-align: center; margin-top: 48px; }
+
+/* ===== 会社概要テーブル ===== */
+.company-table {
+  width: 100%;
+  max-width: 760px;
+  margin: 48px auto 0;
+  border-collapse: collapse;
+}
+
+.company-table th,
+.company-table td {
+  padding: 20px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+.company-table th {
+  width: 180px;
+  color: var(--green-dark);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.company-table ul { padding-left: 1.2em; }
+
+/* ===== 代表挨拶 ===== */
+.message-box {
+  max-width: 760px;
+  margin: 48px auto 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 48px 44px;
+}
+
+.message-box p { margin-bottom: 1.4em; font-size: 15px; }
+.message-box p:last-of-type { margin-bottom: 0; }
+
+.message-sign {
+  text-align: right;
+  margin-top: 32px;
+  font-family: var(--serif);
+}
+
+.message-sign .title { font-size: 13px; color: var(--ink-soft); }
+.message-sign .name { font-size: 19px; letter-spacing: 0.14em; color: var(--green-dark); }
+
+/* ===== お知らせ ===== */
+.news-list {
+  max-width: 760px;
+  margin: 48px auto 0;
+  list-style: none;
+}
+
+.news-list li {
+  display: flex;
+  gap: 28px;
+  padding: 20px 8px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  flex-wrap: wrap;
+}
+
+.news-list time {
+  color: var(--green-soft);
+  white-space: nowrap;
+  font-size: 14px;
+  padding-top: 2px;
+}
+
+.news-tag {
+  font-size: 12px;
+  background: var(--green-pale);
+  color: var(--green);
+  padding: 2px 12px;
+  align-self: flex-start;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+/* ===== お問い合わせフォーム ===== */
+.contact-form {
+  max-width: 640px;
+  margin: 48px auto 0;
+}
+
+.form-group { margin-bottom: 28px; }
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green-dark);
+  margin-bottom: 8px;
+}
+
+.required {
+  color: #b0413e;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.form-note {
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ===== ページタイトル帯 ===== */
+.page-header {
+  background: var(--green-dark);
+  padding: 56px 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-family: var(--serif);
+  color: var(--white);
+  font-size: 26px;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
+
+.page-header .en {
+  display: block;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+/* ===== フッター ===== */
+.site-footer {
+  background: var(--green-dark);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 56px 0 32px;
+  margin-top: 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-brand .brand-name { color: var(--white); }
+
+.footer-brand address {
+  font-style: normal;
+  font-size: 13px;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-nav ul { list-style: none; }
+.footer-nav li { margin-bottom: 10px; }
+.footer-nav a { color: rgba(255, 255, 255, 0.85); font-size: 14px; }
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 48px;
+  letter-spacing: 0.1em;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 800px) {
+  .services-grid { grid-template-columns: 1fr; }
+
+  .header-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 14px 0;
+    gap: 10px;
+  }
+
+  .global-nav ul { gap: 18px; flex-wrap: wrap; justify-content: center; }
+
+  .hero { padding: 64px 0 56px; }
+  .hero-logo img { height: 130px; }
+
+  .section { padding: 56px 0; }
+
+  .company-table th { width: 110px; }
+
+  .message-box { padding: 32px 24px; }
+}
