@@ -95,34 +95,32 @@ a:hover { opacity: 0.75; }
 
 /* ===== ヒーロー ===== */
 .hero {
-  background: linear-gradient(160deg, var(--green-pale) 0%, #ffffff 60%);
-  padding: 96px 0 88px;
+  position: relative;
+  background:
+    linear-gradient(rgba(18, 60, 40, 0.55), rgba(18, 60, 40, 0.65)),
+    url("../images/hero.jpg") center / cover no-repeat;
+  padding: 150px 0 140px;
   text-align: center;
-}
-
-.hero-logo img {
-  height: 180px;
-  width: auto;
-  margin-bottom: 32px;
-  mix-blend-mode: multiply;
 }
 
 .hero h1 {
   font-family: var(--heading);
-  font-size: clamp(26px, 4.5vw, 40px);
-  color: var(--green-dark);
+  font-size: clamp(28px, 5vw, 44px);
+  color: var(--white);
   font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1.7;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .hero p {
   margin-top: 24px;
-  color: var(--ink-soft);
+  color: rgba(255, 255, 255, 0.92);
   font-size: 15px;
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ===== セクション共通 ===== */
@@ -174,6 +172,26 @@ a:hover { opacity: 0.75; }
   transition: box-shadow 0.25s, transform 0.25s;
 }
 
+.service-card.has-img {
+  padding: 0 0 32px;
+  overflow: hidden;
+}
+
+.service-card.has-img img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.service-card.has-img h3,
+.service-card.has-img p,
+.service-card.has-img ul {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
 .service-card:hover {
   box-shadow: 0 10px 28px rgba(18, 60, 40, 0.1);
   transform: translateY(-3px);
@@ -198,6 +216,68 @@ a:hover { opacity: 0.75; }
   padding-left: 1.2em;
   font-size: 14px;
   color: var(--ink-soft);
+}
+
+/* ===== 画像+テキストの2カラム ===== */
+.split {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  margin-top: 48px;
+}
+
+.split.reverse { flex-direction: row-reverse; }
+
+.split-img {
+  flex: 1 1 46%;
+  min-width: 0;
+}
+
+.split-img img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.split-body { flex: 1 1 54%; min-width: 0; }
+
+.split-body h3 {
+  font-family: var(--heading);
+  font-size: 22px;
+  color: var(--green-dark);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+
+.split-body p { color: var(--ink-soft); font-size: 15px; }
+
+.split-body .btn { margin-top: 28px; }
+
+/* ===== 写真背景CTA ===== */
+.cta-photo {
+  background:
+    linear-gradient(rgba(18, 60, 40, 0.78), rgba(18, 60, 40, 0.78)),
+    url("../images/leaves.jpg") center / cover no-repeat;
+  padding: 88px 0;
+  text-align: center;
+}
+
+.cta-photo .section-title { color: var(--white); }
+.cta-photo .section-title-en { color: rgba(255, 255, 255, 0.7); }
+.cta-photo .section-lead { color: rgba(255, 255, 255, 0.85); }
+
+.cta-photo .btn {
+  background: transparent;
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.cta-photo .btn:hover {
+  background: var(--white);
+  color: var(--green-dark);
 }
 
 /* ===== ボタン ===== */
@@ -350,8 +430,10 @@ a:hover { opacity: 0.75; }
 
 /* ===== ページタイトル帯 ===== */
 .page-header {
-  background: var(--green-dark);
-  padding: 56px 0;
+  background:
+    linear-gradient(rgba(18, 60, 40, 0.82), rgba(18, 60, 40, 0.82)),
+    url("../images/leaves.jpg") center / cover no-repeat;
+  padding: 72px 0;
   text-align: center;
 }
 
@@ -415,6 +497,13 @@ a:hover { opacity: 0.75; }
 @media (max-width: 800px) {
   .services-grid { grid-template-columns: 1fr; }
 
+  .split,
+  .split.reverse { flex-direction: column; gap: 28px; }
+
+  .split-img img { height: 220px; }
+
+  .hero { padding: 96px 0 88px; }
+
   .header-inner {
     flex-direction: column;
     height: auto;
@@ -423,9 +512,6 @@ a:hover { opacity: 0.75; }
   }
 
   .global-nav ul { gap: 18px; flex-wrap: wrap; justify-content: center; }
-
-  .hero { padding: 64px 0 56px; }
-  .hero-logo img { height: 130px; }
 
   .section { padding: 56px 0; }
 
