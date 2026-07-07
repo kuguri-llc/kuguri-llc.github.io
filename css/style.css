@@ -349,15 +349,6 @@ a:hover { opacity: 0.75; }
 .message-sign .title { font-size: 13px; color: var(--ink-soft); }
 .message-sign .name { font-size: 19px; letter-spacing: 0.14em; color: var(--green-dark); }
 
-.message-sign .signature {
-  display: inline-block;
-  font-family: "Great Vibes", cursive;
-  font-size: 38px;
-  line-height: 1.3;
-  color: var(--green-dark);
-  margin-top: 10px;
-}
-
 /* ===== お知らせ ===== */
 .news-list {
   max-width: 760px;
