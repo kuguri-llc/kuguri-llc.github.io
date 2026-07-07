@@ -62,7 +62,7 @@ a:hover { opacity: 0.75; }
   gap: 12px;
 }
 
-.brand img { height: 44px; width: auto; mix-blend-mode: multiply; }
+.brand img { height: 44px; width: auto; }
 
 .brand-name {
   font-family: var(--en);
